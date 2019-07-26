@@ -1,0 +1,19 @@
+[Unit]
+Description=IP Manager node.js application
+Documentation=
+After=network.target
+
+[Service]
+Environment=NODE_ENV=production NODE_LOG=/var/log/ip/logfile
+Type=simple
+User=www-data
+Group=www-data
+ExecStart=/usr/bin/node /var/www/node-ip/app.js
+WorkingDirectory=/var/www/node-ip
+Restart=on-failure
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node-ip
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+systemctl enable node-ip
+exit 0

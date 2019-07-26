@@ -1,0 +1,5 @@
+#!/bin/sh
+
+systemctl stop node-ip
+systemctl start node-ip
+exit 0
